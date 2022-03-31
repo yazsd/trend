@@ -1,0 +1,69 @@
+<html> 
+    <head> 
+        <title>Скальпкор - скринер крупных лимитных заявок на бирже Binance | Бесплатный трейдинг-сервис для скальпинга</title>         
+        <meta name="description" content="Скальпкор - бесплатный трейдинг-сервис для скальперов. Анализирует криптоактивы на бирже Binance и показывает уровни, от которых цена может отскочить, либо импульсно пробить."> 
+        <meta name="application-name" content="Скринер крупных лимитных заявок на бирже Binance"> 
+        <meta name="theme-color" content="#ffffff"> 
+        <meta name="twitter:card" content="summary"> 
+        <meta property="og:image:width" content="203"> 
+        <meta property="og:image:height" content="203"> 
+        <meta property="og:description" content="Скальпкор - бесплатный трейдинг-сервис для скальперов. Анализирует криптоактивы на бирже Binance и показывает уровни, от которых цена может отскочить, либо импульсно пробить."> 
+        <meta property="og:title" content="Скринер крупных лимитных заявок на бирже Binance"> 
+        <meta property="og:url" content=""> 
+        <meta property="og:image" content=""> 
+        <link rel="shortcut icon" href="ico.png" type="image/x-icon"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="https://trendcore.io/level"> 
+        <link rel="canonical" href="https://trendcore.io/level"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+        <style>.activeFilter { padding: 3px !important; border: 3px solid #6f6f6f !important; } .activeMinFilter { padding: 3px !important; border: 3px solid #6f6f6f !important; } .gray { display: none; } .orange { } .yellow { } .purple { } .pink { } .min0 { } body { font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, Arial, sans-serif; } .sizeChoice { margin-top: 20px; } .whatColor { padding: 5px; border: 1px solid #dadada; border-radius: 3px; text-decoration: none; color: black; } a:active .whatColor { padding: 5px; border: 1px solid #dadada; border-radius: 3px; text-decoration: none; color: blue; } td { border: 1px solid #ccc; padding: 4px; } .boxes { height: 40px; text-align: left; } .boxRed { background: #ffb3c5; height: 40px; width: 40px; } .boxGreen { background: #b3ffca; height: 40px; width: 40px; } .boxOrange { background: #ffd6b3; height: 40px; width: 40px; } .boxSalat { background: #e9ffb3; height: 40px; width: 40px; } .boxic { float: left; margin-right: 5px; } .choice1 { margin-top: 13px; } .choice2 { margin-top: 13px; } span.longmessage { background: #28d628; padding: 3px; border-radius: 3px; color: white; font-size: 13px; text-transform: uppercase; } span.shortmessage { background: #f00; padding: 3px; border-radius: 3px; color: white; font-size: 13px; text-transform: uppercase; } span.neutralmessage { background: #bababa; padding: 3px; border-radius: 3px; color: white; font-size: 13px; text-transform: uppercase; } .short { background: #ffc4c4; } .long { background: #c4ffc4; } .donation { width: 574px; } @media (max-width: 1280px) { table {  max-width: 700px !important; }  .donation {  width: 574px; } } @media (max-width: 574px) { table {  width: 574px !important; }  .donation {  width: 100%; } } @media (max-width: 330px) { table {  width: 320px !important;  font-size: 10px; }  #bodycontent {  width: 100% !important; }  .donation {  width: 100%; }  td {  padding: 2px; }  ul {  padding-left: 15px;  font-size: 13px; } } a { color: #3c5eda; } .defaultFilter { border-right: 6px solid #ffd400; } .heading { text-transform: uppercase; font-size: 15px; }</style>         
+    </head>     
+    <body> 
+        <script src="js/jquery.min.js"></script>         
+        <script type="text/javascript">
+        $.ajax({
+            url: 'indexsee.php',
+            success: function(data) {
+                $("#bodycontent").html(data)
+                    //console.log(data);
+            }
+        });
+
+        setInterval(function() {
+            $.ajax({
+                url: 'indexsee.php',
+                success: function(data) {
+                    $("#bodycontent").html(data)
+                        //console.log(data);
+                }
+            });
+        }, 60000);
+    </script>         
+        <div id="bodycontent"> 
+</div>         
+        <p><a class="whatColor" href="https://trendcore.io/level">Сбросить фильтры</a></p> 
+        <div class="sizeChoice">
+            <strong>Плотности от:</strong> 
+            <div class="choice1">
+                <a class="whatColor" href="?t=0&d=100">От 100к</a> 
+                <a class="defaultFilter whatColor activeFilter" href="https://trendcore.io/level?t=0&d=250">От 250к</a> 
+                <a class="whatColor" href="?t=0&d=500">От 500к</a> 
+                <a class="whatColor" href="?t=0&d=1000">От 1 млн</a> 
+                <a class="whatColor" href="?t=0&d=3000">От 3 млн</a>
+            </div>             
+        </div>         
+        <div class="sizeChoice">
+            <img title="Оценка времени, которое понадобится для разъедания плотности, в минутах" src="images/eaten.png"> 
+            <strong>Минимум: </strong> 
+            <div class="choice1">
+                <a class="whatColor" href="?t=5&d=250">5 мин</a> 
+                <a class="whatColor" href="?t=10&d=250">10 мин</a> 
+                <a class="whatColor" href="?t=20&d=250">20 мин</a> 
+                <a class="whatColor" href="?t=50&d=250">50 мин</a> 
+                <a class="defaultFilter whatColor activeMinFilter" href="https://trendcore.io/level?d=250">Без фильтра</a>
+            </div>             
+        </div>                                                                                                                                                                                                                                                                                                                                                                                                                              
+        <!-- Yandex.Metrika counter -->                           
+        <!-- /Yandex.Metrika counter -->         
+    </body>     
+</html>
